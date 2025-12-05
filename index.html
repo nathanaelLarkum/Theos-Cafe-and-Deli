@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Theo's Cafe & Deli | Best Breakfast & Lunch in Uxbridge</title>
+    <meta name="description" content="Order the best Full English Breakfast, Gourmet Burgers, and Deli Rolls in Uxbridge. Fresh ingredients, delivered hot. Call 01895 742 234.">
+
+    <!-- Google Fonts: Oswald (Bold Headings) & Lato (Readable Body) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Oswald:wght@500;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'cafe-red': '#D90429', // Vibrant Diner Red
+                        'cafe-red-dark': '#B90524',
+                        'cafe-black': '#111111', 
+                        'cafe-offwhite': '#F8F9FA',
+                    },
+                    fontFamily: {
+                        sans: ['Lato', 'sans-serif'],
+                        display: ['Oswald', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom tweaks */
+        body {
+            background-color: #ffffff;
+            color: #111111;
+        }
+        .hero-bg {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1533089862017-5614a9579cf4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+        .pattern-dots {
+            background-image: radial-gradient(#D90429 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-cafe-red selection:text-white">
+
+    <!-- Sticky Navbar -->
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 bg-white shadow-md border-b-4 border-cafe-red">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <a href="#" class="flex items-center gap-2 group">
+                    <i class="fa-solid fa-mug-hot text-cafe-red text-3xl group-hover:rotate-12 transition transform"></i>
+                    <div class="flex flex-col">
+                        <span class="font-display font-bold text-3xl text-cafe-black leading-none tracking-tight uppercase">Theo's</span>
+                        <span class="text-xs text-cafe-red font-bold uppercase tracking-widest font-sans">Cafe & Deli</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Nav -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="font-bold text-cafe-black hover:text-cafe-red transition uppercase text-sm tracking-wider">Home</a>
+                    <a href="#offers" class="font-bold text-cafe-black hover:text-cafe-red transition uppercase text-sm tracking-wider">Specials</a>
+                    <a href="#menu" class="font-bold text-cafe-black hover:text-cafe-red transition uppercase text-sm tracking-wider">Menu</a>
+                    <a href="#location" class="font-bold text-cafe-black hover:text-cafe-red transition uppercase text-sm tracking-wider">Visit Us</a>
+                    <a href="tel:01895742234" class="bg-cafe-red text-white px-6 py-2 rounded font-bold uppercase tracking-wider hover:bg-cafe-red-dark transition transform hover:scale-105 shadow-md flex items-center gap-2">
+                        <i class="fa-solid fa-phone"></i> Order Now
+                    </a>
+                </div>
+
+                <!-- Mobile Button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-btn" class="text-cafe-black hover:text-cafe-red focus:outline-none">
+                        <i class="fa-solid fa-bars text-3xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100">
+            <div class="px-4 pt-2 pb-6 space-y-2">
+                <a href="#home" class="block py-3 font-bold text-cafe-black hover:text-cafe-red border-b border-gray-100">HOME</a>
+                <a href="#offers" class="block py-3 font-bold text-cafe-black hover:text-cafe-red border-b border-gray-100">SPECIALS</a>
+                <a href="#menu" class="block py-3 font-bold text-cafe-black hover:text-cafe-red border-b border-gray-100">MENU</a>
+                <a href="#location" class="block py-3 font-bold text-cafe-black hover:text-cafe-red border-b border-gray-100">VISIT US</a>
+                <a href="tel:01895742234" class="block w-full text-center mt-4 bg-cafe-red text-white py-3 rounded font-bold uppercase shadow-lg">
+                    Call 01895 742 234
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="home" class="hero-bg h-[85vh] flex items-center justify-center text-center px-4 pt-16">
+        <div class="max-w-4xl mx-auto animate-fade-in-up">
+            <div class="inline-block bg-cafe-red text-white px-4 py-1 mb-6 text-sm font-bold tracking-widest uppercase rounded transform -rotate-1 shadow-lg">
+                Rated #1 in Town
+            </div>
+            <h1 class="font-display text-5xl md:text-7xl font-bold text-white mb-6 leading-tight uppercase drop-shadow-xl">
+                The Best Breakfast <br>& Lunch in <span class="text-cafe-red bg-white px-2 text-shadow-none">Uxbridge</span>
+            </h1>
+            <p class="text-lg md:text-2xl text-gray-100 mb-10 font-sans font-medium max-w-2xl mx-auto drop-shadow-md">
+                Fresh ingredients, generous portions, delivered piping hot to your door.
+            </p>
+            
+            <div class="flex flex-col sm:flex-row justify-center gap-5">
+                <a href="tel:01895742234" class="bg-cafe-red text-white px-8 py-4 rounded font-sans font-bold text-xl hover:bg-cafe-red-dark transition shadow-lg border-2 border-cafe-red flex items-center justify-center gap-3">
+                    <i class="fa-solid fa-phone"></i> 01895 742 234
+                </a>
+                <a href="#menu" class="bg-white text-cafe-black px-8 py-4 rounded font-sans font-bold text-xl hover:bg-gray-100 transition border-2 border-white">
+                    View Menu
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Special Offers Banner (Crucial - High Contrast) -->
+    <section id="offers" class="py-16 bg-cafe-red relative overflow-hidden">
+        <!-- Pattern Overlay -->
+        <div class="absolute inset-0 z-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/diagonal-stripes.png')]"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-12">
+                <h2 class="font-display text-4xl md:text-5xl font-bold text-white mb-2 uppercase">Daily Deals</h2>
+                <div class="w-24 h-1 bg-white mx-auto rounded"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                <!-- Deal 1 -->
+                <div class="bg-white p-2 rounded-lg shadow-2xl transform hover:-translate-y-2 transition duration-300">
+                    <div class="border-2 border-dashed border-cafe-black p-6 h-full flex flex-col items-center text-center rounded-lg">
+                        <div class="bg-cafe-black text-white font-bold py-1 px-4 text-xs mb-4 uppercase tracking-widest rounded-full">Morning Fuel</div>
+                        <h3 class="font-display text-3xl font-bold text-cafe-red mb-2 uppercase">Breakfast Special</h3>
+                        <p class="text-gray-600 mb-4 font-bold">1x Sausage, 1x Bacon, 1x Egg, 1x Hash Brown, Beans</p>
+                        <div class="mt-auto w-full border-t border-gray-200 pt-4 flex justify-between items-center px-4">
+                            <span class="text-4xl font-display font-bold text-cafe-black">£7.95</span>
+                            <a href="tel:01895742234" class="text-cafe-red font-bold hover:text-cafe-black transition uppercase text-sm tracking-wider flex items-center gap-2">Order <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Deal 2 -->
+                <div class="bg-white p-2 rounded-lg shadow-2xl transform hover:-translate-y-2 transition duration-300">
+                    <div class="border-2 border-dashed border-cafe-black p-6 h-full flex flex-col items-center text-center rounded-lg">
+                        <div class="bg-cafe-black text-white font-bold py-1 px-4 text-xs mb-4 uppercase tracking-widest rounded-full">For The Little Ones</div>
+                        <h3 class="font-display text-3xl font-bold text-cafe-red mb-2 uppercase">Kids Menu Deal</h3>
+                        <p class="text-gray-600 mb-4 font-bold">Choice of Cheese Burger, Nuggets, or Fish Fingers with Chips</p>
+                        <div class="mt-auto w-full border-t border-gray-200 pt-4 flex justify-between items-center px-4">
+                            <span class="text-4xl font-display font-bold text-cafe-black">£5.00</span>
+                            <a href="tel:01895742234" class="text-cafe-red font-bold hover:text-cafe-black transition uppercase text-sm tracking-wider flex items-center gap-2">Order <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Preview Section -->
+    <section id="menu" class="py-20 bg-cafe-offwhite pattern-dots">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 bg-white py-8 shadow-sm border border-gray-200 rounded-lg max-w-4xl mx-auto">
+                <span class="text-cafe-red font-bold uppercase tracking-widest text-sm">Freshly Cooked</span>
+                <h2 class="font-display text-4xl md:text-5xl font-bold text-cafe-black mt-2 mb-4 uppercase">Menu Highlights</h2>
+                <div class="w-16 h-1 bg-cafe-red mx-auto"></div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-10">
+                
+                <!-- Category: All Day Breakfast -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-lg border border-gray-200 group">
+                    <div class="h-56 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1544510802-53676067cb40?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Full Breakfast" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                        <div class="absolute top-0 right-0 bg-cafe-red text-white font-bold px-3 py-1 text-xs uppercase">Best Sellers</div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-3 mb-6 border-b-2 border-cafe-red pb-2">
+                            <i class="fa-solid fa-bacon text-cafe-black text-2xl"></i>
+                            <h3 class="font-display text-2xl font-bold text-cafe-black uppercase">All Day Breakfast</h3>
+                        </div>
+                        <ul class="space-y-4">
+                            <li class="flex justify-between items-start">
+                                <div>
+                                    <span class="block font-bold text-cafe-black">Theo's Big Boy</span>
+                                    <span class="text-xs text-gray-500">The ultimate hunger cure</span>
+                                </div>
+                                <span class="font-bold text-cafe-red">£13.95</span>
+                            </li>
+                            <li class="flex justify-between items-start">
+                                <span class="font-bold text-cafe-black">Irish Breakfast</span>
+                                <span class="font-bold text-cafe-red">£12.95</span>
+                            </li>
+                            <li class="flex justify-between items-start">
+                                <span class="font-bold text-cafe-black">Full English</span>
+                                <span class="font-bold text-cafe-red">£10.95</span>
+                            </li>
+                            <li class="flex justify-between items-start">
+                                <span class="font-bold text-cafe-black">Vegetarian Breakfast</span>
+                                <span class="font-bold text-cafe-red">£9.95</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Category: Gourmet Burgers -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-lg border border-gray-200 group">
+                    <div class="h-56 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1594212699903-ec8a3eca50f5?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Burger" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-3 mb-6 border-b-2 border-cafe-red pb-2">
+                            <i class="fa-solid fa-burger text-cafe-black text-2xl"></i>
+                            <h3 class="font-display text-2xl font-bold text-cafe-black uppercase">Gourmet Burgers</h3>
+                        </div>
+                        <ul class="space-y-4">
+                            <li class="flex justify-between items-start">
+                                <span class="font-bold text-cafe-black">BBQ Stack Cheese Burger</span>
+                                <span class="font-bold text-cafe-red">£10.95</span>
+                            </li>
+                            <li class="flex justify-between items-start">
+                                <span class="font-bold text-cafe-black">Bacon Cheeseburger</span>
+                                <span class="font-bold text-cafe-red">£9.95</span>
+                            </li>
+                            <li class="flex justify-between items-start">
+                                <span class="font-bold text-cafe-black">Grilled Chicken Burger</span>
+                                <span class="font-bold text-cafe-red">£9.95</span>
+                            </li>
+                            <li class="flex justify-between items-start">
+                                <span class="font-bold text-cafe-black">Classic Cheeseburger</span>
+                                <span class="font-bold text-cafe-red">£8.95</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Category: Deli & Rolls -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-lg border border-gray-200 group">
+                    <div class="h-56 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1509722747724-69c4260059b8?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Sandwich" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-3 mb-6 border-b-2 border-cafe-red pb-2">
+                            <i class="fa-solid fa-bread-slice text-cafe-black text-2xl"></i>
+                            <h3 class="font-display text-2xl font-bold text-cafe-black uppercase">Deli & Rolls</h3>
+                        </div>
+                        <ul class="space-y-4">
+                            <li class="flex justify-between items-start">
+                                <span class="font-bold text-cafe-black">Chicken Fillet Roll</span>
+                                <span class="font-bold text-cafe-red">£8.95</span>
+                            </li>
+                            <li class="flex justify-between items-start">
+                                <div>
+                                    <span class="block font-bold text-cafe-black">Chicken, Bacon & Stuffing</span>
+                                    <span class="text-xs text-gray-500">Baguette</span>
+                                </div>
+                                <span class="font-bold text-cafe-red">£5.80</span>
+                            </li>
+                            <li class="flex justify-between items-start">
+                                <span class="font-bold text-cafe-black">BLT Sandwich</span>
+                                <span class="font-bold text-cafe-red">£4.80</span>
+                            </li>
+                            <li class="flex justify-between items-start">
+                                <span class="font-bold text-cafe-black">Bacon Baguette</span>
+                                <span class="font-bold text-cafe-red">£4.40</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Full Menu CTA -->
+            <div class="text-center mt-12">
+                <button class="bg-cafe-black text-white px-10 py-4 rounded font-bold uppercase tracking-wider hover:bg-cafe-red transition shadow-lg inline-flex items-center">
+                    <i class="fa-solid fa-file-pdf mr-3"></i> Download Full Menu
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location & Hours -->
+    <section id="location" class="bg-white border-t-4 border-cafe-red">
+        <div class="flex flex-col md:flex-row">
+            
+            <!-- Map Side -->
+            <div class="md:w-1/2 min-h-[400px] relative bg-gray-200">
+                <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="w-full h-full object-cover grayscale opacity-80" alt="Cafe Location">
+                <div class="absolute inset-0 flex items-center justify-center">
+                    <div class="bg-white p-8 rounded-lg shadow-2xl text-center border-2 border-cafe-red max-w-xs">
+                        <i class="fa-solid fa-map-pin text-4xl text-cafe-red mb-4"></i>
+                        <p class="font-bold text-cafe-black text-xl font-display uppercase">Cowley</p>
+                        <p class="text-gray-600 font-sans font-bold">Uxbridge, UB8 2EA</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Info Side -->
+            <div class="md:w-1/2 p-12 md:p-20 flex flex-col justify-center bg-cafe-black text-white">
+                <h2 class="font-display text-4xl font-bold mb-8 text-cafe-red uppercase">Visit Theo's</h2>
+                
+                <div class="space-y-8">
+                    <div class="flex items-start">
+                        <div class="w-12 h-12 rounded-full bg-white flex items-center justify-center mr-4 flex-shrink-0">
+                            <i class="fa-solid fa-location-dot text-cafe-red text-xl"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-xl text-white font-display uppercase mb-1">Address</h4>
+                            <p class="text-gray-400">Cowley, Uxbridge<br>UB8 2EA</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start">
+                        <div class="w-12 h-12 rounded-full bg-white flex items-center justify-center mr-4 flex-shrink-0">
+                            <i class="fa-solid fa-clock text-cafe-red text-xl"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-xl text-white font-display uppercase mb-1">Opening Hours</h4>
+                            <div class="mt-2 text-gray-300 font-sans">
+                                <div class="flex justify-between w-64 border-b border-gray-700 pb-1 mb-2">
+                                    <span>Mon - Sat</span>
+                                    <span class="font-bold text-white">6:00am – 6:00pm</span>
+                                </div>
+                                <div class="flex justify-between w-64 border-b border-gray-700 pb-1">
+                                    <span>Sunday</span>
+                                    <span class="font-bold text-white">8:00am – 6:00pm</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-10">
+                    <a href="tel:01895742234" class="block w-full text-center bg-cafe-red text-white px-8 py-4 rounded font-sans font-bold text-xl hover:bg-white hover:text-cafe-red transition shadow-lg uppercase">
+                        Call 01895 742 234
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-cafe-black py-8 border-t border-gray-800 text-center">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-center gap-6 mb-4">
+                <a href="#" class="text-gray-500 hover:text-cafe-red transition text-xl"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#" class="text-gray-500 hover:text-cafe-red transition text-xl"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+            <p class="text-gray-600 text-sm uppercase tracking-wider">© 2023 Theo's Cafe & Deli. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Mobile Menu Toggle
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close menu on link click
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Navbar Scroll Effect
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 20) {
+                navbar.classList.add('shadow-xl');
+            } else {
+                navbar.classList.remove('shadow-xl');
+            }
+        });
+    </script>
+</body>
+</html>
